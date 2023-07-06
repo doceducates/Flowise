@@ -81,8 +81,8 @@ export class App {
 
     async config(socketIO?: Server) {
         // Limit is needed to allow sending/receiving base64 encoded string
-        this.app.use(express.json({ limit: '50mb' }))
-        this.app.use(express.urlencoded({ limit: '50mb', extended: true }))
+        this.app.use(express.json({ limit: '500mb' }))
+        this.app.use(express.urlencoded({ limit: '500mb', extended: true }))
 
         // Allow access from *
         this.app.use(cors())
